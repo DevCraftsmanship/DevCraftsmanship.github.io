@@ -8,22 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .poppins-bold {
             font-family: "Poppins", sans-serif;
             font-weight: 700;
-            font-style: normal;
         }
 
         .poppins-regular {
             font-family: "Poppins", sans-serif;
             font-weight: 400;
-            font-style: normal;
         }
 
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -33,57 +33,45 @@
         }
 
         nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
             background-color: rgb(18, 18, 62);
+            padding: 1rem 0;
         }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            color: rgb(153, 153, 226);
-            font-size: 1.01rem;
-        }
-
-        .left {
+        nav .navbar-brand {
             font-size: 1.5rem;
+        }
+
+        nav .nav-link {
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav .nav-link:hover {
+            color: rgb(153, 153, 226);
         }
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
-            margin: 0 0;
+            padding: 2rem 0;
         }
 
-        .firstSection>div {
-            width: 40%;
+        .firstSection > div {
+            flex: 1 1 50%;
+            text-align: center;
+            padding: 1rem;
         }
 
-        .leftSection {
+        .firstSection .leftSection {
             font-size: 2.5rem;
         }
 
-        .rightSection img {
-            width: 80%;
-            margin: 50px 0;
-
+        .firstSection .rightSection img {
+            max-width: 100%;
+            height: auto;
         }
 
         .purple {
@@ -96,105 +84,112 @@
 
         .secondSection {
             max-width: 80vw;
-            margin: auto;
-            height: 80 vh;
-        }
-
-        main hr {
-            border: 0;
-            background: #9c97f1;
-            height: 1.2px;
-            margin: 40px 84px;
+            margin: 4rem auto;
+            text-align: center;
         }
 
         .secondSection h1 {
-            font-size: 1.9rem;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .text-gray {
             color: gray;
+            margin-bottom: 1rem;
         }
 
         .secondSection .box {
-            background: white;
-            width: 80 vw;
-            height: 2px;
-            margin: 56px 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .secondSection .vertical {
-            height: 93px;
-            width: 1px;
+            flex: 1 1 30%;
             background-color: white;
-            margin: 0 150px;
+            color: black;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
         }
 
-        .img-top {
+        .secondSection .vertical:hover {
+            transform: translateY(-10px);
+        }
+
+        .secondSection .vertical img.img-top {
             width: 50px;
-            position: relative;
-            top: -40px;
-            left: -24px;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .vertical-title {
-            position: relative;
-            top: 35px;
-            width: 150px;
-            font-size: 14px;
-            
+            margin-top: 35px;
+            font-size: 16px;
         }
 
-        .vertical-title:hover{
-            color: rgb(153, 153, 226);
-            font-size: 1.01rem;
+        .vertical-title a {
+            color: black;
+            text-decoration: none;
         }
 
         .vertical-desc {
-            position: relative;
-            top: 45px;
             color: gray;
-            width: 150px;
-
+            margin-top: 10px;
         }
 
         footer {
             background-color: #0e0e1a;
-            height: 50px;
-        }
-
-        .flex {
-            display: flex;
-            margin: 23px 122px;
+            padding: 1rem;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="left">Welcome to My Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Work Experience</a></li>
-                    <li><a href="/">Project</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand poppins-bold" href="#">Tuhin's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Work Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="firstSection">
-            <div class="leftSection">Hi, My Name is <span class="purple">Tuhin</span>
+            <div class="leftSection poppins-bold">Hi, My Name is <span class="purple">Tuhin</span>
                 <div> and I am a passionate</div>
                 <div>Java Developer</div>
                 <span id="element"></span>
             </div>
             <div class="rightSection">
-                <img src="bg.png" alt="">
-
+                <img src="bg.png" alt="Developer Image">
             </div>
         </section>
         <hr>
@@ -203,16 +198,16 @@
             <h1>Work Experiences</h1>
             <div class="box">
                 <div class="vertical">
-                    <img class="img-top" src="developer.png" alt="">
+                    <img class="img-top" src="developer.png" alt="ADP Pvt Ltd">
                     <div class="vertical-title">
-                       <a href="https://in.adp.com/" style="text-decoration: none; color: white;"> ADP Pvt Ltd</a> (2018-2021)
+                        <a href="https://in.adp.com/">ADP Pvt Ltd</a> (2018-2021)
                     </div>
                     <div class="vertical-desc">
                         Member Technical
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="img-top" src="developer.png" alt="">
+                    <img class="img-top" src="developer.png" alt="Thomson Reuters">
                     <div class="vertical-title">
                         Thomson Reuters (2021-2021)
                     </div>
@@ -221,7 +216,7 @@
                     </div>
                 </div>
                 <div class="vertical">
-                    <img class="img-top" src="developer.png" alt="">
+                    <img class="img-top" src="developer.png" alt="Bosch Global Software Technologies">
                     <div class="vertical-title">
                         Bosch Global Software Technologies (2022-Present)
                     </div>
@@ -229,16 +224,20 @@
                         Senior Software Engineer
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
+    <footer>
+        <div>&copy; 2024 Tuhin's Portfolio</div>
+    </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: ['Core Java', 'Eclipse Plugin Developement', 'Eclipse RCP', 'Autosar', 'SQL', 'Python'],
+            strings: ['Core Java', 'Eclipse Plugin Development', 'Eclipse RCP', 'Autosar', 'SQL', 'Python'],
             typeSpeed: 50,
         });
     </script>
