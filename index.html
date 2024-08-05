@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuhin - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 0;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 50px 0;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80 vh;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80 vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 150px;
+        }
+
+        .img-top {
+            width: 50px;
+            position: relative;
+            top: -40px;
+            left: -24px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 35px;
+            width: 150px;
+            font-size: 14px;
+            
+        }
+
+        .vertical-title:hover{
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 45px;
+            color: gray;
+            width: 150px;
+
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            height: 50px;
+        }
+
+        .flex {
+            display: flex;
+            margin: 23px 122px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Welcome to My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Work Experience</a></li>
+                    <li><a href="/">Project</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi, My Name is <span class="purple">Tuhin</span>
+                <div> and I am a passionate</div>
+                <div>Java Developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experiences</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="img-top" src="developer.png" alt="">
+                    <div class="vertical-title">
+                       <a href="https://in.adp.com/" style="text-decoration: none; color: white;"> ADP Pvt Ltd</a> (2018-2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Member Technical
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="developer.png" alt="">
+                    <div class="vertical-title">
+                        Thomson Reuters (2021-2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Software Engineer
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top" src="developer.png" alt="">
+                    <div class="vertical-title">
+                        Bosch Global Software Technologies (2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Senior Software Engineer
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Core Java', 'Eclipse Plugin Developement', 'Eclipse RCP', 'Autosar', 'SQL', 'Python'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
